@@ -1,11 +1,61 @@
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
 
-## What is Nextra?
+The goal of this website is to provide comprehensive documentation and examples of how OneToGo is developed and how it works.
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+# Installation
 
-## Documentation
+Clone the repository and run `npm install` in the root folder.
+Then, inside the root folder create a `.env.local` file and add the following variables:
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+```env
+# Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
+
+# Stripe
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+
+# OpenAI
+OPENAI_API_KEY=
+```
+
+To run the application, run `npm run dev` in the root folder.
+
+# Develpment
+
+While developing OneToGo, I followed the SOLID programming principles and the Clean Architecture. The goal was to create a scalable and maintainable application that is easy to extend and test.
+
+The application is split into three layers:
+
+#### Presentation Layer
+
+Formed by the `/app`, and `/components` folders. This layer contains the UI components and the logic for rendering them.
+
+#### Logic Layer
+
+Formed by the custom hooks in the `/hooks` folder. This layer contains the logic for handling the data and the business logic.
+
+#### Data Layer
+
+Formed by the `/services` folder. This layer contains the logic for fetching and sending data to the backend.
+
+[Learn more about how services work here.](/services).
+
+## Technologies
+
+-   [Next.js 13](https://nextjs.org/)
+-   [Firebase](https://firebase.google.com/)
+-   [Stripe](https://stripe.com/)
+-   [OpenAI API](https://openai.com/api)
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [TypeScript](https://www.typescriptlang.org/)
+
+## Testing
+
+-   [Jest](https://jestjs.io/)

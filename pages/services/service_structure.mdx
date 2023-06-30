@@ -1,0 +1,46 @@
+# The structure of a service
+
+Let's take a look at a `GenericService.ts` file as an example:
+
+```typescript
+export interface GenericService {
+    // Method 1
+    get<T>(url: string): Promise<T>;
+
+    // Method 2
+    post<T>(url: string, data: any): Promise<T>;
+}
+```
+
+We are defining an abstract interface that will later be used by the custom hooks to interact with the data source.
+This ensures that no matter what the data source is, the hooks will always be able to interact with it without having to know the underlying implementation.
+
+## The implementation of a service
+
+The implementation of a service is defined in the `/GenericService/[DataSource]/implementation.ts` file:
+
+```typescript
+import { GenericService } from "../GenericService";
+
+export class DataSourceGenericServiceImplementation implements GenericService {
+    // Method 1
+    get<T>(url: string): Promise<T> {
+        // Lower level implementation specific to the data source (e.g. Stripe, Firebase, etc.)
+    }
+
+    // Method 2
+    post<T>(url: string, data: any): Promise<T> {
+        // Lower level implementation specific to the data source (e.g. Stripe, Firebase, etc.)
+    }
+}
+```
+
+## Using a specific implementation of a service
+
+Inside the `/GenericService/config.ts` file we import the desired implementation of the service and export a new instance of it:
+
+```typescript
+import { DataSourceGenericServiceImplementation } from "./Stripe/implementation";
+
+export const GenericService = new DataSourceGenericServiceImplementation();
+```

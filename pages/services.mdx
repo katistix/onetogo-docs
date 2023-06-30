@@ -1,0 +1,32 @@
+# Services
+
+Services are defined by TypeScript interfaces to provide an abstraction layer between the application and the underlying data sources. This allows the application to be decoupled from the data source and allows for easier testing.
+
+If you want to learn more about the structure of a service, please read the [Service Structure](/services/service_structure) section.
+
+## What services are available?
+
+The services are divided depending on the part of the application they are used in.
+
+### App (the app that regular users use)
+
+-   ChatService
+-   CustomerTicketsService
+-   DatabaseCustomerDataService
+-   MapPointsService
+-   PaymentProviderDataService
+-   PurchaseService
+-   RegisterCustomerService
+-   TicketTemplateService
+
+### Controller (the app for validating tickets)
+
+-   CheckTicketService
+
+### Seller (the seller dashboard)
+
+-   ControllerService
+-   SellerConnectService
+-   SellerDataService
+-   TicketActivityService
+-   TicketTemplateService
