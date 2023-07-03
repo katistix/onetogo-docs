@@ -4,7 +4,7 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 const config: DocsThemeConfig = {
     logo: <span>OneToGo Docs</span>,
     project: {
-        link: "https://github.com/katistix/onetogo",
+        link: "https://github.com/Katistix-Studios/onetogo/",
     },
     footer: {
         text: "Paul Tal @katistix 2023",
