@@ -40,7 +40,7 @@ export class DataSourceGenericServiceImplementation implements GenericService {
 Inside the `/GenericService/config.ts` file we import the desired implementation of the service and export a new instance of it:
 
 ```typescript
-import { DataSourceGenericServiceImplementation } from "./Stripe/implementation";
+import { DataSourceGenericServiceImplementation } from "./DataSource/implementation";
 
 export const GenericService = new DataSourceGenericServiceImplementation();
 ```
