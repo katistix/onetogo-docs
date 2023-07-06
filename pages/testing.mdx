@@ -1,0 +1,35 @@
+# Testing OneToGo
+
+OneToGo uses both [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/) for testing. Jest is used for unit testing and Cypress is used for end-to-end testing.
+
+## Unit testing with Jest
+
+To run the unit tests, run the following command in the root directory of the project:
+
+```bash
+npm run test
+```
+
+This will run all the unit tests in the project.
+
+As a standard practice, all unit tests are written in the same directory as the component they are testing. For example, the unit tests for the `App` component are written in `src/components/App/App.test.ts`.
+
+## End to end testing with Cypress
+
+Running end to end tests requires the application to be running in _test mode_ and also requires the Firebase Emulators to be running.
+
+1. First, run the emulators:
+
+    ```bash
+    npm run emulators
+    ```
+
+2. Then, run the application in test mode:
+    ```bash
+    npm run cypress
+    ```
+
+A browser window will open with the Cypress test runner. Click on the test you want to run and it will run in the browser window.
+
+As a standard practice, all end to end tests are written in the `cypress/` directory.
+For example the end to end tests for the `App` component are written in `cypress/e2e/App.cy.ts`.

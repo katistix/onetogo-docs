@@ -1,5 +1,7 @@
 {
     "index": "Introduction",
-    "features": "Features",
-    "services": "Services"
+    "features": "Features and functionality",
+    "services": "Services",
+    "testing": "Testing",
+    "deployment": "Deployment"
 }
