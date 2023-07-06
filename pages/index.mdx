@@ -62,3 +62,22 @@ Formed by the `/services` folder. This layer contains the logic for fetching and
 
 -   [Cypress](https://www.cypress.io/)
 -   [Jest](https://jestjs.io/)
+
+## NPM Commands
+
+A list of most important NPM commands declared in the `package.json` file.
+
+### Development Commands
+
+-   `npm run dev` - Runs the application in development mode.
+
+### Testing
+
+-   `npm run cy:test` - Runs `next dev` in _test mode_, setting the following env variables: `FIRESTORE_EMULATOR_HOST='127.0.0.1:8080' NEXT_PUBLIC_NODE_ENV='test' NODE_ENV=test`
+-   `npm run cypress` - Runs the command above and opens the Cypress test runner in parallel.
+-   `npm run emulators` - Runs the Firebase emulators for Firestore and Authentication.
+-   `npm run emulators:export` - Overwrites a snapshot of the Firebase emulators data, to make it persistent between runs.
+
+### Deployment Commands
+
+-   `npm run deploy:rules` - Deploys the Firestore security rules to the Firebase project.
